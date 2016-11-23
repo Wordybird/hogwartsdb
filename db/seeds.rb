@@ -3,8 +3,8 @@ require_relative('../models/house')
 
 require ('pry-byebug')
 
-Student.delete_all()
 House.delete_all()
+Student.delete_all()
 
 house1=House.new({
   "name"=>"Griffindor",
@@ -20,7 +20,7 @@ house3=House.new({
   })
 house4=House.new({
   "name"=>"Slytherin",
-  "url"=>"http://vignette4.wikia.nocookie.net/harrypotter/images/e/ef/Slytherin%E2%84%A2_Crest_(Painting).png/revision/latest?cb=20091129190321"
+  "url"=>"http://yourwayscooler.weebly.com/uploads/1/7/5/4/17542421/_5095786_orig.png"
   })
 
 house1.save()
@@ -31,30 +31,30 @@ house4.save()
 student1 = Student.new({
   "first_name" => "Val",
   "last_name" => "Dryden",
-  "house" => "Griffindor",
+  "house_id" => house1.id,
   "age" => 11
 })
+
 student2 = Student.new({
   "first_name" => "Cameron",
   "last_name" => "Fulton",
-  "house" => "Hufflepuff",
+  "house_id" => house2.id,
   "age" => 12
 })
 
 student3 = Student.new({
   "first_name" => "Ben",
   "last_name" => "Faulkner",
-  "house" => "Ravenclaw",
+  "house_id" => house3.id,
   "age" => 11
 })
 
 student4 = Student.new({
   "first_name" => "Lewis",
   "last_name" => "MacNee",
-  "house" => "Slytherin",
+  "house_id" => house4.id,
   "age" => 11
 })
-
 
 student1.save()
 student2.save()
