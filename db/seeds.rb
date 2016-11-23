@@ -35,6 +35,7 @@ student2.save()
 student3.save()
 student4.save()
 
-binding.pry
+students = Student.all
 
+binding.pry
 nil
