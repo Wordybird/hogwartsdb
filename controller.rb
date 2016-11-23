@@ -23,11 +23,13 @@ get '/students/:id' do
 end
 
 post '/students/:id' do
-
+  Student.update(params)
+  redirect to ("/students/#{params[:id]}")
 end
 
 get '/students/:id/edit' do
-
+  @student=Student.find(params[:id])
+  erb(:edit)
 end
 
 post '/students/:id/delete' do

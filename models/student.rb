@@ -42,4 +42,14 @@ class Student
     SqlRunner.run(sql)
   end
 
+  def self.update(options)
+    sql = "UPDATE students SET
+          first_name='#{options['first_name']}',
+          last_name='#{options['last_name']}',
+          house='#{options['house']}',
+          age='#{options['age']}'
+          WHERE id='#{options['id']}'"
+    SqlRunner.run(sql)
+  end
+
 end
