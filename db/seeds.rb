@@ -1,7 +1,7 @@
 require_relative('../models/student')
 require ('pry-byebug')
 
-#Student.delete_all()
+Student.delete_all()
 
 student1 = Student.new({
   "first_name" => "Val",
