@@ -1,0 +1,7 @@
+<h1>Hogwarts Houses</h1>
+
+<% for house in @houses %>
+<p><%= house.name %></p>
+<p><a href="/houses/<%= house.id %>"><img src="<%= house.url %>" height=300px width=300px /></a></p>
+<hr />
+<% end %>

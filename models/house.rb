@@ -35,4 +35,11 @@ class House
     SqlRunner.run(sql)
   end
 
+  def students()
+    sql = "SELECT * FROM students WHERE house_id=#{@id};"
+    results = SqlRunner.run(sql)
+    students = results.map{ |result| Student.new(result)}
+    return students
+  end
+
 end

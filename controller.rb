@@ -9,6 +9,17 @@ get '/students' do
   erb(:index)
 end
 
+get '/houses' do
+  @houses=House.all()
+  erb(:houses)
+end
+
+get '/houses/:id' do
+  @house=House.find(params[:id])
+  @student=Student.all()
+  erb(:show_houses)
+end
+
 get '/students/new' do
   @houses=House.all()
   erb(:new)
@@ -39,8 +50,4 @@ end
 post '/students/:id/delete' do
   Student.delete(params[:id])
   redirect to('/students')
-end
-
-get '/students' do
-
 end

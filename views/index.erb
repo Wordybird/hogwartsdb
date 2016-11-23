@@ -1,4 +1,4 @@
-<h1>Hogwarts Students And Houses</h1>
+<h1>Hogwarts Students</h1>
 
 <p><a href="/students/new">New Student.</a></p>
 <hr />
@@ -9,10 +9,5 @@
 <p>Age: <%= student.age %></p>
 <!-- <p>ID: <%= student.id %></p> -->
 <p><a href="students/<%= student.id %>">Show student details.</a></p>
-<hr />
-<% end %>
-<% for house in @houses %>
-<p>Name: <%= house.name %></p>
-<p><img src="<%= house.url %>" height=300px width=300px /></p>
 <hr />
 <% end %>
