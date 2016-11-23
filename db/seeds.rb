@@ -3,12 +3,12 @@ require_relative('../models/house')
 
 require ('pry-byebug')
 
-House.delete_all()
 Student.delete_all()
+House.delete_all()
 
 house1=House.new({
   "name"=>"Griffindor",
-  "url"=>"http://vignette4.wikia.nocookie.net/harrypotter/images/3/37/Gryffindor_Crest.jpg/revision/latest?cb=20120317101541"
+  "url"=>"http://vignette4.wikia.nocookie.net/pottermore/images/1/16/Gryffindor_crest.png/revision/latest?cb=20111112232412"
   })
 house2=House.new({
   "name"=>"Hufflepuff",
@@ -16,11 +16,11 @@ house2=House.new({
   })
 house3=House.new({
   "name"=>"Ravenclaw",
-  "url"=>"http://vignette3.wikia.nocookie.net/harrypotter/images/9/94/Ravenclaw_Logo.jpg/revision/latest?cb=20140627182803"
+  "url"=>"http://vignette1.wikia.nocookie.net/harrypotter/images/4/40/Ravenclaw_Crest_1.png/revision/latest?cb=20150413213520"
   })
 house4=House.new({
   "name"=>"Slytherin",
-  "url"=>"http://yourwayscooler.weebly.com/uploads/1/7/5/4/17542421/_5095786_orig.png"
+  "url"=>"http://vignette1.wikia.nocookie.net/pottermore/images/4/45/Slytherin_Crest.png/revision/latest?cb=20111112232353"
   })
 
 house1.save()

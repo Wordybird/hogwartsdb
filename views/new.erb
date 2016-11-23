@@ -4,11 +4,10 @@
 <p><label>First Name: <input type="text" name="first_name"/></label></p>
 <p><label>Last Name: <input type="text" name="last_name"/></label></p>
   <p><label>House: 
-  <select name="house">
-  <option value= "Griffindor">Griffindor</option>
-  <option value= "Hufflepuff">Hufflepuff</option>
-  <option value= "Ravenclaw">Ravenclaw</option>
-  <option value= "Slytherin">Slytherin</option>
+  <select name="house_id">
+  <% for house in @houses %>
+  <option value= "<%= house.id %>" ><%=house.name %></option>
+  <% end %>
   </select> </label></p>
   <p><label>Age: <input type="number" name="age"/></label></p>
   <p><input type="submit" value="Submit" /></p>
